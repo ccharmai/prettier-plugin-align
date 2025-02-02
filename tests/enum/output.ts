@@ -46,3 +46,12 @@ namespace _ {
     BAR = 'BAR',
   }
 }
+
+enum TEST_9 {
+  /** This is foo */
+  FOO    = 'FOO',
+  BAR    = 'BAR', /** This is bar */
+  // This is foobar
+  FOOBAR = 'FOOBAR',
+  BARFOO = 'BARFOO', // This is barfoo
+}

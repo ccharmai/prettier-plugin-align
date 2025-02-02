@@ -44,7 +44,7 @@ Add the plugin to your Prettier config:
 ### Before:
 ```ts
 enum Status {
-  Pending,
+  Pending = "PENDING",
   InProgress = "IN_PROGRESS",
   Done = "DONE"
 }
@@ -83,4 +83,3 @@ npm test
 
 ## 📜 License
 This project is licensed under the MIT License.
-

@@ -39,7 +39,32 @@ enum Options {
     }
   }
 }
+;(option: Options) => {
+  switch (option) {
+    case Options.A: {
+      return 'A'
+    }
 
+    case Options.BB: {
+      return 'BB'
+    }
+
+    default: {
+      return 'CCC'
+    }
+  }
+}
+;(option: Options) => {
+  switch (option) {
+    case Options.A:  return 'A' /** Because I can */
+    /** Because We can */
+    case Options.BB: return 'BB'
+    default: {
+      // Why not?
+      return 'CCC'
+    }
+  }
+}
 switch (Options.A) {
   case Options.A:
     console.log('A')
