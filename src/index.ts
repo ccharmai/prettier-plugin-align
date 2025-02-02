@@ -16,8 +16,8 @@ export const languages: Partial<SupportLanguage>[] = [
 ]
 
 export const parsers: Record<'babel' | 'typescript', Parser> = {
-  babel: { ...prettierPluginBabel.parsers.babel },
-  typescript: { ...prettierPluginTypeScript.parsers.typescript },
+  babel: prettierPluginBabel.parsers.babel,
+  typescript: prettierPluginTypeScript.parsers.typescript,
 }
 
 export const printers: Record<'estree', Printer> = {
@@ -33,14 +33,5 @@ export const printers: Record<'estree', Printer> = {
 
       return printed
     },
-  },
-}
-
-export const options: Record<'optionName', SupportOption> = {
-  optionName: {
-    type: 'boolean',
-    category: 'Global',
-    default: true,
-    description: 'A Prettier plugin for aligning enums, switch statements, and other code structures for better readability.',
   },
 }
